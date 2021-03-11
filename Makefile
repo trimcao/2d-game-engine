@@ -1,5 +1,5 @@
 build:
-	clang++ -Wall -std=c++17 -I/opt/homebrew/include -L/opt/homebrew/lib src/*.cpp -lSDL2 -llua5.4 -o gameengine;
+	clang++ -Wall -std=c++17 -I/opt/homebrew/include -I/opt/homebrew/opt/lua@5.3/include -I"./libs/" -L/opt/homebrew/lib -L/opt/homebrew/opt/lua@5.3/lib src/*.cpp -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer -llua5.3 -o gameengine;
 
 run:
 	./gameengine
